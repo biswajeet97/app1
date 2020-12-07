@@ -1,0 +1,13 @@
+<h1> Public Message App</h1>
+<div *ngFor="let chat of chats">{{chat.user }} {{chat.data}} </div>
+<form [formGroup]="messages" (submit)="onSend()">
+    <label>
+            User
+            <input type="text" style="width: 20%;" formControlName = 'user'>
+    </label>
+    <label>
+            Message
+            <input type="text" style="width: 50%;" formControlName = 'data'>
+    </label>
+    <button type="submit"> Send Message</button>
+</form>
